@@ -15,7 +15,8 @@ with stage as(
     user_type,
     birth_year
     from {{ source('demo', 'bike') }}
-    limit 10
+
+    where bike_id != '"bike_id"' and starttime != 'starttime' and starttime != '"starttime"'
 )
 select *
 from stage
