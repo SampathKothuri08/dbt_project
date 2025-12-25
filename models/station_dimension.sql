@@ -3,9 +3,8 @@ with bike as(
     distinct 
     start_station_name as station_name,
     start_station_id as station_id,
-    start_lat as station_lat,
-    start_lng as station_lng
+    start_station_latitude as station_lat,
+    start_station_longitude as station_lng
     from {{ source('demo', 'bike') }} 
-    where ride_id != 'ride_id' 
 )
 select * from bike 
