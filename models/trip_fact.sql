@@ -13,3 +13,5 @@ with trip as(
     where ride_id != 'ride_id'
 )
 select * from trip
+
+
